@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome! - Nio Furniture</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
+    </head>
+    <body>
+        <section>
+            <div class="circle"></div>
+            <header>
+                <a href="#"><image src="assets/logo.png" class="logo"></a>
+                <div class="toggle" onclick="toggleMenu()"></div>    
+                <ul class="navigation">
+                    <li><a href="index.html" class="activePage">Home</a></li>
+                    <li><a href="signin-signup/signin.php">Shop</a></li>
+                    <li><a href="signin-signup/signin.php">About</a></li>
+                    <li><a href="signin-signup/signin.php">Login</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>Furniture Cantik,<br>Bikin <span>Aesthetic</span></h2>
+                    <p>
+                        Temukan berbagai furniture cantik, jadikan rumah Anda lebih aesthetic, dan buat tetangga makin melirik.
+                    </p>
+                    <a href="signin-signup/signin.php">Explore Now</a>
+                </div>
+                <div class="imgBox">
+                    <img src="assets/img1.png" class="starbucks">
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="assets/thumb1.png" onclick="imgSlider('assets/img1.png'); changeCricleColor('#D0C7C5')"></li>
+                <li><img src="assets/thumb2.png" onclick="imgSlider('assets/img2.png'); changeCricleColor('#676775')"></li>
+                <li><img src="assets/thumb3.png" onclick="imgSlider('assets/img3.png'); changeCricleColor('#D0C7C5')"></li>
+            </ul>
+            <ul class="sci">
+                <li><a href="#"><img src="assets/facebook.png"></a></li>
+                <li><a href="#"><img src="assets/twitter.png"></a></li>
+                <li><a href="#"><img src="assets/instagram.png"></a></li>
+            </ul>
+        </section>
+
+        <script type="text/javascript">
+            function imgSlider(anything) {
+                document.querySelector('.starbucks').src = anything;
+            }
+
+            function changeCricleColor(color) {
+                const circle = document.querySelector('.circle');
+                circle.style.background = color;
+            }
+
+            function toggleMenu() {
+                var menuToggle = document.querySelector('.toggle');
+                var navigation = document.querySelector('.navigation')
+                menuToggle.classList.toggle('active')
+                navigation.classList.toggle('active')
+            }
+        </script>
+
+    </body>
+</html>
